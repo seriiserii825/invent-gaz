@@ -1,3 +1,39 @@
 header.main-header
     .container
         .main-header__content
+            .logo
+                a(href="index.html")
+                    img(src="assets/i/logo.svg" alt="")
+
+            .sandwitch-wrap
+                .sandwitch
+                    .sandwitch__line.sandwitch__line--top
+                    .sandwitch__line.sandwitch__line--middle
+                    .sandwitch__line.sandwitch__line--bottom
+
+            ul.main-menu#js-main-menu
+                li.current-menu-item
+                    a(href="about.html") Despre noi
+                li
+                    a(href="about.html") Produse
+                li
+                    a(href="about.html") Conditii
+                li
+                    a(href="about.html") Contra status
+                li
+                    a(href="about.html") Contacte
+
+            .wpglobus-lang
+                .list
+                    a.wpglobus-selector-link.wpglobus-current-language(href='#')
+                        img(src='https://euconsult.md/wp-content/plugins/wpglobus/flags/ro.png' alt='')
+                        span.name Rom&acirc;n&abreve;
+                        span.code RO
+                    a.wpglobus-selector-link(href='#')
+                        img(src='https://euconsult.md/wp-content/plugins/wpglobus/flags/ru.png' alt='')
+                        span.name &Rcy;&ucy;&scy;&scy;&kcy;&icy;&jcy;
+                        span.code RU
+                    a.wpglobus-selector-link(href='#')
+                        img(src='https://euconsult.md/wp-content/plugins/wpglobus/flags/us.png' alt='')
+                        span.name English
+                        span.code EN
