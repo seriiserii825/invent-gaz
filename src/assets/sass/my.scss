@@ -793,3 +793,49 @@ a {
     }
   }
 }
+/*404
+========================================*/
+.error-page {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 740px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media screen and (max-width: 500px) {
+    height: 400px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $indigo;
+    opacity: .8;
+    z-index: 1;
+  }
+  &__content {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 2;
+  }
+  &__title {
+    margin-bottom: 10px;
+    @include montseratbold;
+    font-size: 200px;
+    @media screen and (max-width: 500px) {
+      font-size: 100px;
+    }
+
+  }
+  &__text {
+    margin-bottom: 40px;
+    max-width: 600px;
+  }
+}
+

@@ -1,0 +1,28 @@
+extends template
+
+block css
+    //- link(rel="stylesheet" type="text/css" href="assets/i/svg/bg/css/sprite.css")
+    link(rel="stylesheet" type="text/css" href="assets/css/my.css")
+
+block title
+    title Produse
+
+block content
+    include ../includes/mixins
+    .hidden
+        include ../../../build/assets/i/svg/inline/sprite.svg
+
+    include ../includes/header
+
+    .error-page(style="background: url('assets/i/404.jpg')")
+        .error-page__content
+            h1.error-page__title  404
+            p.error-page__text We are sorry. But the page you are looking for is not available.<br> Perhaps you can try a new searching.
+            a.btn.btn--center.btn--on-dark(href="index.html") Prima pagina
+
+    include ../includes/footer
+
+    include ../includes/scripts/ie-scripts
+
+block scripts
+    script(src="assets/libs/jquery-easy-scroll/jquery.easeScroll.js")
