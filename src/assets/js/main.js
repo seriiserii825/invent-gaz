@@ -56,6 +56,23 @@ $(function () {
 		});
 	};
 	sandwitch();
+
+	let showPoup = function () {
+		$('#js-show-popup').on('click', function (e) {
+			e.preventDefault();
+			$('body').addClass('fixed');
+			$('#js-popup').fadeIn();
+			$('#js-overlay').fadeIn();
+		});
+
+		$('#js-overlay, #js-close-popup').on('click', function (e) {
+			e.preventDefault();
+			$('body').removeClass('fixed');
+			$('#js-popup').fadeOut();
+			$('#js-overlay').fadeOut();
+		});
+	};
+	showPoup();
 });
 
 

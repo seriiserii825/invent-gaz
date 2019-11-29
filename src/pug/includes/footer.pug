@@ -38,3 +38,18 @@ footer.main-footer
                     img(src="assets/i/map.jpg")
 .copyright
     span    © 2019 Industry. All rights reserved.
+.overlay#js-overlay
+.popup#js-popup
+    .popup-wrap
+        .close-popup#js-close-popup
+        .form
+            header.section__header
+                h2.section__title Trimite un mesaj
+            .form-group-grid
+                input(type="text" name="your-name" placeholder="Nume")
+                input(type="text" name="your-surname" placeholder="Prenume")
+            .form-group-grid
+                input(type="tel" name="your-phone" placeholder="Telefon")
+                input(type="email" name="your-email" placeholder="Email")
+            textarea(name="message")
+            input.btn(type="submit")

@@ -1,0 +1,81 @@
+extends template
+
+block css
+    //- link(rel="stylesheet" type="text/css" href="assets/i/svg/bg/css/sprite.css")
+    link(rel="stylesheet" type="text/css" href="assets/css/my.css")
+
+block title
+    title Produse
+
+block content
+    include ../includes/mixins
+    .hidden
+        include ../../../build/assets/i/svg/inline/sprite.svg
+
+    include ../includes/header
+    .page-intro(style="background-image: url('assets/i/page-intro.jpg')")
+        .container
+            .page-intro__content
+                h3.page-intro__title Мontra status
+                ul.breadcrumbs
+                    li
+                        a(href="index.html") Prima
+                    li
+                        span Contra status
+
+    .check-page
+        header.section__header.section__header--center
+            h2.section__title Vă rugăm să introduceți codul aplicației sau numărul contorului
+
+        .check-page__form
+            .check-page__form-item
+                span Cod cerere / număr contor:
+            .check-page__form-item
+                input(type="text" name="check" placeholder="introduceți codul aici")
+            .check-page__form-item
+                a.btn.btn--small(href="#") Caută
+
+        .check-block
+            .check-block__item
+               header.check-block__header
+                   h4.check-block__title Compania
+               ul.check-block__list
+                   li
+                        span.check-block__title Nume:
+                        span.check-block__value IMSP AMT Riscani
+                   li
+                       span.check-block__title IDNO:
+                       span.check-block__value 1003600153212
+                   li
+                       span.check-block__title Adresa:
+                       span.check-block__value Chișinău, Alecu Russo 11
+            .check-block__item
+                header.check-block__header
+                    h4.check-block__title Contor
+                ul.check-block__list
+                    li
+                        span.check-block__title Nume:
+                        span.check-block__value Gas MD 1304
+                    li
+                        span.check-block__title Numărul:
+                        span.check-block__value 00 355 82054
+                    li
+                        span.check-block__title Adresa:
+                        span.check-block__value Chișinău, Alecu Russo 11
+            .check-block__item
+                header.check-block__header
+                    h4.check-block__title Status contor
+                ul.check-block__list
+                    li
+                        span.check-block__title Status:
+                        span.check-block__value În așteptare a verificării
+
+                .check-block__img
+                    img(src="assets/i/wait.svg" alt="")
+
+    include ../includes/footer
+
+    include ../includes/scripts/ie-scripts
+
+block scripts
+    script(src="assets/libs/jquery-easy-scroll/jquery.easeScroll.js")
