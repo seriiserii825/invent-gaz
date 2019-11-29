@@ -1,0 +1,75 @@
+extends template
+
+block css
+    //- link(rel="stylesheet" type="text/css" href="assets/i/svg/bg/css/sprite.css")
+    link(rel="stylesheet" type="text/css" href="assets/css/my.css")
+
+block title
+    title Produse
+
+block content
+    include ../includes/mixins
+    .hidden
+        include ../../../build/assets/i/svg/inline/sprite.svg
+
+    include ../includes/header
+    .page-intro(style="background-image: url('assets/i/page-intro.jpg')")
+        .container
+            .page-intro__content
+                h3.page-intro__title Contacte
+                ul.breadcrumbs
+                    li
+                        a(href="index.html") Prima
+                    li
+                        span Contacte
+
+    .contacts
+        .container
+            .contacts__wrap
+                .details
+                    h3.details__title Detalii de contact
+                    p Contactați-ne pentru orice întrebări despre industriile sau proiectele noastre.
+
+                    ul.details__list
+                        li
+                            img(src="assets/i/phone-white.svg")
+                            a(href="tel:022 273 195") 022 273 195
+                        li
+                            img(src="assets/i/mobile-white.svg")
+                            span
+                                a(href="tel:069 76 9999") 069 76 9999
+                                a(href="tel:069 77 4968") 069 77 4968
+                        li
+                            img(src="assets/i/map-white.svg")
+                            span Chișinău, str. Uzinelor 11/1
+                        li
+                            img(src="assets/i/mail-white.svg")
+                            a(href="mailto:invent-in@rambler.ru") invent-in@rambler.ru
+                        li
+                            img(src="assets/i/clock-white.svg")
+                            span Luni până sâmbătă: 9: 00-18: 00
+                .form
+                    header.section__header
+                        h2.section__title Trimite un mesaj
+                    .form-group-grid
+                        input(type="text" name="your-name" placeholder="Nume")
+                        input(type="text" name="your-surname" placeholder="Prenume")
+                    .form-group-grid
+                        input(type="tel" name="your-phone" placeholder="Telefon")
+                        input(type="email" name="your-email" placeholder="Email")
+                    textarea(name="message")
+                    input.btn(type="submit")
+
+
+
+
+
+
+
+
+    include ../includes/footer
+
+    include ../includes/scripts/ie-scripts
+
+block scripts
+    script(src="assets/libs/jquery-easy-scroll/jquery.easeScroll.js")
