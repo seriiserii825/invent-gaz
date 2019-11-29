@@ -1,0 +1,30 @@
+.section {
+  padding: 60px 0;
+  &--pb0 {
+    padding-bottom: 0;
+  }
+  &__subtitle {
+    color: $tundora;
+  }
+  &__title {
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 24px;
+    font-size: 35px;
+    font-weight: bold;
+    color: $indigo;
+    @media screen and (max-width: 600px) {
+      font-size: 26px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100px;
+      height: 3px;
+      background: $indigo;
+    }
+  }
+}
