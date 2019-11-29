@@ -579,8 +579,70 @@ a {
     @media screen and (max-width: 576px) {
       font-size: 20px;
     }
-
-
   }
 }
-
+/*footer
+========================================*/
+.main-footer {
+  padding: 60px 0;
+  color: white;
+  background: $main-shaft;
+  a {
+    color: white;
+  }
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    @media screen and (max-width: 992px) {
+      display: block;
+      margin: 0 auto;
+      max-width: 600px;
+    }
+  }
+  &__header {
+    margin-bottom: 20px;
+  }
+  &__title {
+    position: relative;
+    padding-bottom: 36px;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100px;
+      height: 3px;
+      background: $indigo;
+    }
+  }
+  p {
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  &__socials {
+    display: flex;
+    a {
+      display: inline-flex;
+      width: 34px;
+      height: 34px;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid white;
+      border-radius: 3px;
+      margin-right: 8px;
+    }
+  }
+  ul {
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
+.copyright {
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+  background: $main-shaft;
+  border-top: 2px solid #444;
+}
