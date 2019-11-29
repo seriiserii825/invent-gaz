@@ -1,0 +1,31 @@
+extends template
+
+block css
+    //- link(rel="stylesheet" type="text/css" href="assets/i/svg/bg/css/sprite.css")
+    link(rel="stylesheet" type="text/css" href="assets/css/my.css")
+
+block title
+    title Produse
+
+block content
+    include ../includes/mixins
+    .hidden
+        include ../../../build/assets/i/svg/inline/sprite.svg
+
+    include ../includes/header
+    .page-intro(style="background-image: url('assets/i/page-intro.jpg')")
+        .container
+            .page-intro__content
+                h3.page-intro__title Produse
+                ul.breadcrumbs
+                    li
+                        a(href="index.html") Prima
+                    li
+                        span Produse
+    include ../includes/category-block-12
+    include ../includes/footer
+
+    include ../includes/scripts/ie-scripts
+
+block scripts
+    script(src="assets/libs/jquery-easy-scroll/jquery.easeScroll.js")

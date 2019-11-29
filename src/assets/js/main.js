@@ -18,30 +18,32 @@ $(function () {
 	});
 
 	let slider = function () {
-		$('#js-slider__wrap').slick({
-			arrows: false,
-			fade: true,
-			responsive: [
-				{
-					breakpoint: 720,
-					settings: {
-						dots: true,
-						slidesToShow: 1,
-						slidesToScroll: 1
-					}
-				},
-			]
-		});
+		if($('#js-slider__wrap').length > 0){
+			$('#js-slider__wrap').slick({
+				arrows: false,
+				fade: true,
+				responsive: [
+					{
+						breakpoint: 720,
+						settings: {
+							dots: true,
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+					},
+				]
+			});
 
-		$('.slider-button__left').on('click', function (e) {
-			e.preventDefault();
-			$('#js-slider__wrap').slick('slickPrev');
-		});
+			$('.slider-button__left').on('click', function (e) {
+				e.preventDefault();
+				$('#js-slider__wrap').slick('slickPrev');
+			});
 
-		$('.slider-button__right').on('click', function (e) {
-			e.preventDefault();
-			$('#js-slider__wrap').slick('slickNext');
-		});
+			$('.slider-button__right').on('click', function (e) {
+				e.preventDefault();
+				$('#js-slider__wrap').slick('slickNext');
+			});
+		}
 	};
 	slider();
 
