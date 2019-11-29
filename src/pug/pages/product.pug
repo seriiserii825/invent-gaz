@@ -1,0 +1,77 @@
+extends template
+
+block css
+    //- link(rel="stylesheet" type="text/css" href="assets/i/svg/bg/css/sprite.css")
+    link(rel="stylesheet" type="text/css" href="assets/css/my.css")
+
+block title
+    title Produse
+
+block content
+    include ../includes/mixins
+    .hidden
+        include ../../../build/assets/i/svg/inline/sprite.svg
+
+    include ../includes/header
+    .page-intro(style="background-image: url('assets/i/page-intro.jpg')")
+        .container
+            .page-intro__content
+                h3.page-intro__title Produse
+                ul.breadcrumbs
+                    li
+                        a(href="index.html") Prima
+                    li
+                        a(href="products.html") Produse
+                    li
+                        span Produs
+
+    .single-product
+        .container
+            .single-product__wrapper
+                .single-product__img
+                    img(src="assets/i/single-product.jpg" alt="")
+                .single-product__content
+                    h2.single-product__title Corector DTC 20 B
+                    table.single-product__table
+                        tr
+                            td Tip contor
+                            td de fiecare zi
+                        tr
+                            td Cheltuiala minimă măsurată
+                            td membranoasă
+                        tr
+                            td Fluxul măsurat maxim
+                            td 0,04 m³ / h
+                        tr
+                            td Presiunea maximă de lucru
+                            td 6m³ / h
+                        tr
+                            td Diametrul nominal
+                            td 50kPa
+                        tr
+                            td Distanța de centru
+                            td 20mm
+                        tr
+                            td Interval de interacțiune
+                            td 206mm
+                        tr
+                            td Durata de viață
+                            td 10 ani
+                        tr
+                            td Dimensiuni
+                            td 20 de ani
+
+            .single-product__text
+                h2.single-product__title Specificații tehnice
+                .single-product__column
+                    p Solustrid stă la dispoziție inovație, servicii, certificare, producție, dezvoltare. Singurul și singurul nostru obiectiv este să susținem economia mondială, oferind cele mai bune servicii pentru că credem „Lumea ești tu”.
+                    p Instalarea unui contor de gaz este un lucru necesar. În primul rând, plata cu contorul va fi mult mai mică decât cea plătită la tarifele standard. Cât de cubi de gaz cheltuiți, exact ceea ce trebuie să plătiți. Acei rezidenți care nu au instalat un contor de gaz plătesc de mai multe ori. Și în al doilea rând, veți începe să economisiți gaze naturale și nu îl veți irosi. Prin instalarea unui contor de gaz, vă veți economisi banii.
+                    p Solustrid stă la dispoziție inovație, servicii, certificare, producție, dezvoltare. Singurul și singurul nostru obiectiv este să susținem economia mondială, oferind cele mai bune servicii pentru că credem „Lumea ești tu”.
+                    p Instalarea unui contor de gaz este un lucru necesar. În primul rând, plata cu contorul va fi mult mai mică decât cea plătită la tarifele standard. Cât de cubi de gaz cheltuiți, exact ceea ce trebuie să plătiți. Acei rezidenți care nu au instalat un contor de gaz plătesc de mai multe ori. Și în al doilea rând, veți începe să economisiți gaze naturale și nu îl veți irosi. Prin instalarea unui contor de gaz, vă veți economisi banii.
+
+    include ../includes/footer
+
+    include ../includes/scripts/ie-scripts
+
+block scripts
+    script(src="assets/libs/jquery-easy-scroll/jquery.easeScroll.js")
