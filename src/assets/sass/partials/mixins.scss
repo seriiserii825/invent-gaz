@@ -15,6 +15,9 @@
 @mixin montserat(){
 	font-family: 'Montserat', sans-serif;
 }
+@mixin montseratbold(){
+	font-family: 'Montserat Bold', sans-serif;
+}
 
 @mixin placeholder-input($color) {
 	&[type='text']::-webkit-input-placeholder,
