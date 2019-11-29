@@ -79,6 +79,18 @@ p {
       border-color: transparent;
     }
   }
+  &.btn--on-dark {
+    color: $tundora;
+    background: white;
+    border: 1px solid $catskill-white;
+    &:visited {
+      color: $tundora;
+    }
+    &:hover {
+      background: #eee;
+      border-color: transparent;
+    }
+  }
   &.btn--center {
     display: table;
     margin: 0 auto;
@@ -532,6 +544,43 @@ a {
     font-size: 20px;
     font-weight: bold;
     color: $indigo;
+  }
+}
+/*show-popup
+========================================*/
+.show-popup {
+  padding: 40px 0;
+  color: white;
+  background: $indigo;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 992px) {
+      display: block;
+      text-align: center;
+    }
+  }
+  &__title {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    @media screen and (max-width: 400px) {
+      font-size: 26px;
+    }
+
+  }
+  &__subtitle {
+    font-size: 24px;
+    font-weight: normal;
+    @media screen and (max-width: 992px) {
+      margin-bottom: 30px;
+    }
+    @media screen and (max-width: 576px) {
+      font-size: 20px;
+    }
+
+
   }
 }
 
