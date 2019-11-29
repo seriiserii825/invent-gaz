@@ -63,6 +63,26 @@ p {
   background: $indigo;
   border-radius: 3px;
   transition: all .4s;
+  &.btn--small {
+    padding: 14px 36px;
+  }
+  &.btn--white {
+    color: $tundora;
+    background: transparent;
+    border: 1px solid $catskill-white;
+    &:visited {
+      color: inherit;
+    }
+    &:hover {
+      color: white;
+      background: $indigo;
+      border-color: transparent;
+    }
+  }
+  &.btn--center {
+    display: table;
+    margin: 0 auto;
+  }
 
   &:visited {
     color: white;
@@ -470,6 +490,40 @@ a {
   &__text {
     line-height: 1.5;
     color: $emperor;
+  }
+}
+/*products
+========================================*/
+.products {
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+  &__item {
+    margin-bottom: 45px;
+    padding: 40px 20px;
+    text-align: center;
+    border: 1px solid $catskill-white;
+    border-radius: 3px;
+  }
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+    overflow: hidden;
+  }
+  &__subtitle {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: $tundora;
+  }
+  &__title {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: $indigo;
   }
 }
 

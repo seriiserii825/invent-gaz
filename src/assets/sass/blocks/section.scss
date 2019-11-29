@@ -1,9 +1,19 @@
 .section {
   padding: 60px 0;
+  &__header {
+    &.section__header--center {
+      text-align: center;
+      .section__title::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
   &--pb0 {
     padding-bottom: 0;
   }
   &__subtitle {
+    margin-bottom: 10px;
     color: $tundora;
   }
   &__title {
